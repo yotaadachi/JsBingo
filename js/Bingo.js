@@ -27,7 +27,7 @@
     let btn0 = document.getElementById('btn0');
     let spinButton = document.getElementById('spinButton');
 
-    // let soundManager = soundManager();
+    let soundManager = soundManager();
 
     // 結果のレンダリング
     let renderBingo = function () {
@@ -46,6 +46,20 @@
     }
     renderBingo();
 
+    // SPINボタン押下処理
+    spinButton.addEventListener('click', function() {
+        if(isPlaying) return;
+    
+        soundManager.playDrum();
+        isPlaying = true;
+
+        this.className = 'inactive';
+        btn0.className = 'btn';
+
+        panel1.className = 'panel';
+        panel10.className = 'panel';
+
+    });
     // mp3ファイルを実行するメソッド
     function SoundManager() {
         let drum = document.getElementById('audio_drum');
