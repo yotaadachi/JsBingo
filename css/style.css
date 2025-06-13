@@ -9,7 +9,7 @@ body {
 }
 
 /* パネルコンテナ */
-body > div:first-of-type {
+body>div:first-of-type {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -27,7 +27,7 @@ body > div:first-of-type {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* STOPボタン */
@@ -68,7 +68,27 @@ body > div:first-of-type {
 #result {
     margin-top: 30px;
     font-size: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.divWrapper {
+    display: flex;
+}
+
+.bingo {
+    margin: 5px;
+    padding: 10px 12px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
     font-weight: bold;
+    font-size: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 /* コピーライト */

@@ -36,6 +36,7 @@
         bingo.forEach(function (elem, index) {
             if (index % 15 === 0) {
                 divWrapper = fragment.appendChild(document.createElement("div"));
+                divWrapper.className = "divWrapper";
             }
             let numDiv = divWrapper.appendChild(document.createElement("div"));
             numDiv.className = "bingo";
