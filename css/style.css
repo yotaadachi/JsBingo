@@ -91,6 +91,10 @@ body>div:first-of-type {
     transition: background-color 0.3s, transform 0.2s;
 }
 
+.bingo.active {
+    background-color: orange;
+}
+
 /* コピーライト */
 .copy {
     font-size: 14px;

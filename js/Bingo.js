@@ -82,6 +82,15 @@
         }, 25);
     }
 
+    function highLightPanel(bingoNum) {
+        // 全てのbingo要素をループ
+        document.querySelectorAll('.bingo').forEach(panel => {
+            if(panel.textContent.trim() === bingoNum) {
+                panel.classList.add('active');
+            }
+        });
+    }
+
     btn0.addEventListener('click', function() {
         stopSlot(0, panel1, panel10, this);
     })
@@ -113,7 +122,7 @@
 
             // change color
             bingoDiv[bingoNum - 1].innerHTML;
-            bingoDiv[bingoNum - 1].className = 'bingo unmatched';
+            bingoDiv[bingoNum - 1].className = 'bingo active';
 
             // init
             isPlaying = false;
