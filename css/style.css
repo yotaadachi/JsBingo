@@ -1,104 +1,111 @@
-/* リセットと基本設定 */
+/* 全体背景（カフェ＋結婚式風） */
 body {
     margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: #f0f4f8;
-    color: #333;
+    font-family: 'Dancing Script', cursive, sans-serif;
+    background: url('../picture/background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #3e2a1f;
     text-align: center;
 }
 
-/* パネルコンテナ */
-body>div:first-of-type {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 80px;
+/* 抽選された数字のパネル */
+.panel {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    margin: 20px;
+    font-size: 60px;
+    font-weight: bold;
+    color: #3e2a1f;
+    background: #fff;
+    border: 4px solid #c59d5f;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-/* パネルの見た目 */
-.panel {
-    width: 100px;
-    height: 100px;
-    background-color: #ffffff;
-    border: 4px solid #0077cc;
-    border-radius: 12px;
-    font-size: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+.panel:hover {
+    transform: scale(1.05);
 }
 
 /* STOPボタン */
 #btn0 {
-    margin: 40px auto 10px;
-    width: 120px;
-    padding: 15px;
-    background-color: #ff4d4f;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
+    display: inline-block;
+    padding: 15px 40px;
+    margin: 15px;
+    font-size: 24px;
     font-weight: bold;
-    transition: 0.3s ease;
+    background: #a94442;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 #btn0:hover {
-    background-color: #d9363e;
+    background: #922d2b;
 }
 
 /* SPINボタン */
 #spinButton {
-    margin: 20px auto;
-    width: 120px;
-    padding: 15px;
-    background-color: #52c41a;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
+    display: inline-block;
+    padding: 15px 40px;
+    margin: 15px;
+    font-size: 24px;
     font-weight: bold;
-    transition: 0.3s ease;
+    background: #c59d5f;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 #spinButton:hover {
-    background-color: #389e0d;
+    background: #a37e40;
 }
 
-/* 結果エリア */
+/* 結果表示（ビンゴ履歴エリア） */
 #result {
-    margin-top: 30px;
-    font-size: 24px;
-    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 }
 
-.divWrapper {
-    display: flex;
-}
-
+/* 抽選済みの数字（ビンゴマス） */
 .bingo {
-    margin: 5px;
-    padding: 10px 12px;
-    background-color: #f0f0f0;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 20px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.2s;
+    width: 55px;
+    height: 55px;
+    line-height: 50px;
+    font-size: 25px;
+    background: #fff;
+    border: 2px solid #c59d5f;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
 }
 
 .bingo.active {
-    background-color: orange;
+    background: #a94442;
+    color: #fff;
 }
 
-/* コピーライト */
+.container {
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+}
+
+/* フッター */
 .copy {
-    font-size: 14px;
-    color: #888;
-    margin-top: 50px;
-    padding-bottom: 20px;
+    margin-top: 5px;
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.7;
 }

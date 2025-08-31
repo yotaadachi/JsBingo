@@ -34,7 +34,7 @@
         let fragment = document.createDocumentFragment();
         let divWrapper;
         bingo.forEach(function (elem, index) {
-            if (index % 15 === 0) {
+            if (index % 7 === 0) {
                 divWrapper = fragment.appendChild(document.createElement("div"));
                 divWrapper.className = "divWrapper";
             }
@@ -85,13 +85,13 @@
     function highLightPanel(bingoNum) {
         // 全てのbingo要素をループ
         document.querySelectorAll('.bingo').forEach(panel => {
-            if(panel.textContent.trim() === bingoNum) {
+            if (panel.textContent.trim() === bingoNum) {
                 panel.classList.add('active');
             }
         });
     }
 
-    btn0.addEventListener('click', function() {
+    btn0.addEventListener('click', function () {
         stopSlot(0, panel1, panel10, this);
     })
 
